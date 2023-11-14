@@ -1,0 +1,39 @@
+// ==================================================
+// use
+// ==================================================
+
+// math
+@use "sass:math";
+
+// settings(variables)
+@use "../variables" as g;
+
+// mixin(hover action)
+@use "../mixin/hover"  as m;
+
+// ==================================================
+// generate classes for each breakpoint
+// ==================================================
+
+// @desc - ブレークポイント別のCSSを作成する
+// @param {string} $class - クラス名
+// @param {string} $bp - ブレイクポイントの値
+//
+// @example - 使い方
+// @include g.sorting-breakpoint(".u-ta-left") { text-align: left !important; }
+
+@mixin sorting-breakpoint($class, $bp: g.$breakpoint) {
+  #{$class} {
+    @content;
+  }
+  @media (min-width: $bp) {
+    #{$class}--pc {
+      @content;
+    }
+  }
+  @media not all and (min-width: $bp) {
+    #{$class}--sp {
+      @content;
+    }
+  }
+}

@@ -1,0 +1,26 @@
+// ==================================================
+// use
+// ==================================================
+
+// math
+@use "sass:math";
+
+// settings(variables)
+@use "../variables" as g;
+
+// ==================================================
+// font size
+// ==================================================
+
+// @desc - フォントサイズをpxからrem単位に変換する
+// @param {number} $size - 変換前のフォントサイズ値を指定
+// @param {number} $default_size - ベースとなるフォントサイズ値を指定（通常は指定不要）
+//
+// @example - 使い方
+//	.box {
+//		@include g.fz(20);
+//	}
+
+@mixin fz($size: g.$font_size, $default_size: g.$font_size) {
+  font-size: math.div($size, $default_size) + rem;
+}

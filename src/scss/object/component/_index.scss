@@ -1,0 +1,21 @@
+// ==================================================
+// use
+// ==================================================
+
+// math
+@use "sass:math";
+
+// settings
+@use "../../global/" as g;
+
+// ==================================================
+// Component
+// ==================================================
+@forward "./c-title";
+@forward "./c-text";
+@forward "./c-grid";
+@forward "./c-list";
+@forward "./c-link";
+@forward "./c-box";
+@forward "./c-figure";
+@forward "./c-table";

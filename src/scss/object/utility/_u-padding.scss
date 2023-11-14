@@ -1,0 +1,36 @@
+// ==================================================
+// use
+// ==================================================
+
+// math
+@use "sass:math";
+
+// settings
+@use "../../global/" as g;
+
+
+// ==================================================
+// padding
+// ==================================================
+
+$padding-base-size: 8;
+@for $i from 0 through 10 {
+  @include g.sorting-breakpoint(".u-pt-#{$i * $padding-base-size}") {
+    padding-top: #{$padding-base-size * $i}px !important;
+  }
+  @include g.sorting-breakpoint(".u-pr-#{$i * $padding-base-size}") {
+    padding-right: #{$padding-base-size * $i}px !important;
+  }
+  @include g.sorting-breakpoint(".u-pb-#{$i * $padding-base-size}") {
+    padding-bottom: #{$padding-base-size * $i}px !important;
+  }
+  @include g.sorting-breakpoint(".u-pl-#{$i * $padding-base-size}") {
+    padding-left: #{$padding-base-size * $i}px !important;
+  }
+}
+@include g.sorting-breakpoint(".u-pr-23") {
+  padding-right: 23px !important;
+}
+@include g.sorting-breakpoint(".u-pl-23") {
+  padding-left: 23px !important;
+}

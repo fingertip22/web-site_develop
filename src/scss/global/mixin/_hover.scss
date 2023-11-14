@@ -1,0 +1,29 @@
+// ==================================================
+// use
+// ==================================================
+
+// math
+@use "sass:math";
+
+// settings(variables)
+@use "../variables" as g;
+
+// ==================================================
+// hover action (unique)
+// ==================================================
+
+// @desc - hoverアクションを付与
+//
+// @example - 使い方
+// @include g.hover {
+//   transition: transform g.$transition;
+//   &:hover {
+//     transform: translateX(100%);
+//   }
+// }
+
+@mixin hover {
+  @media (hover: hover) and (pointer: fine) {
+    @content;
+  }
+}

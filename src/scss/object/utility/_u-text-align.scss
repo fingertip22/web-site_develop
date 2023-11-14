@@ -1,0 +1,17 @@
+// ==================================================
+// use
+// ==================================================
+
+// math
+@use "sass:math";
+
+// settings
+@use "../../global/" as g;
+
+// ==================================================
+// text-align
+// ==================================================
+
+@include g.sorting-breakpoint(".u-ta-left") { text-align: left !important; }
+@include g.sorting-breakpoint(".u-ta-center") { text-align: center !important; }
+@include g.sorting-breakpoint(".u-ta-right") { text-align: right !important; }

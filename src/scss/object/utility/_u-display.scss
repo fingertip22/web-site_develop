@@ -1,0 +1,43 @@
+// ==================================================
+// use
+// ==================================================
+
+// math
+@use "sass:math";
+
+// settings
+@use "../../global/" as g;
+
+// ==================================================
+// display
+// ==================================================
+
+// display none
+@include g.sorting-breakpoint(".u-dn") {
+  display: none !important;
+}
+
+// display block
+@include g.sorting-breakpoint(".u-db") {
+  display: block !important;
+}
+
+// display inline
+@include g.sorting-breakpoint(".u-di") {
+  display: inline !important;
+}
+
+// display inline-block
+@include g.sorting-breakpoint(".u-dib") {
+  display: inline-block !important;
+}
+
+// display flex
+@include g.sorting-breakpoint(".u-dfx") {
+  display: flex !important;
+}
+
+// display inline-flex
+@include g.sorting-breakpoint(".u-difx") {
+  display: inline-flex !important;
+}

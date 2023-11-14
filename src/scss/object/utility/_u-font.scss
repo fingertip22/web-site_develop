@@ -1,0 +1,38 @@
+// ==================================================
+// use
+// ==================================================
+
+// math
+@use "sass:math";
+
+// settings
+@use "../../global/" as g;
+
+// font-color
+.u-txt-color-black {
+  color: g.$color_black01 !important;
+}
+
+// font-size
+// @include g.sorting-breakpoint(".u-fz-12") {
+//   @include g.fz(12);
+// }
+// @include g.sorting-breakpoint(".u-fz-14") {
+//   @include g.fz(14);
+// }
+// @include g.sorting-breakpoint(".u-fz-16") {
+//   @include g.fz(16);
+// }
+// @include g.sorting-breakpoint(".u-fz-18") {
+//   @include g.fz(18);
+// }
+// @include g.sorting-breakpoint(".u-fz-20") {
+//   @include g.fz(20);
+// }
+// @include g.sorting-breakpoint(".u-fz-32") {
+//   @include g.fz(32);
+// }
+
+// font-weight
+@include g.sorting-breakpoint(".u-fw-normal") { font-weight: normal !important; }
+@include g.sorting-breakpoint(".u-fw-bold") { font-weight: bold !important; }

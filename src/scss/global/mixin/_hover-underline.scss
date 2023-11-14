@@ -1,0 +1,36 @@
+// ==================================================
+// use
+// ==================================================
+
+// math
+@use "sass:math";
+
+// settings(variables)
+@use "../variables" as g;
+
+// mixin(hover action)
+@use "../mixin/hover"  as m;
+
+// ==================================================
+// hover action (underline)
+// ==================================================
+
+// @desc - 基本hoverスタイル付与（アンダーライン）
+// @param {string} $color - アンダーラインの色を指定
+//
+// @example - 使い方
+// @include g.hover-underline;
+
+@mixin hover-underline($color: g.$color_primary) {
+  @include m.hover {
+    padding-bottom: 4px;
+    transition: background-size g.$transition;
+    background-image: linear-gradient(transparent 92%, $color 92%);
+    background-repeat: no-repeat;
+    background-position: 0% 100%;
+    background-size: 0% 100%;
+    &:hover {
+      background-size: 100% 100%;
+    }
+  }
+}

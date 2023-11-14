@@ -1,0 +1,37 @@
+// ==================================================
+// use
+// ==================================================
+
+// math
+@use "sass:math";
+
+// settings
+@use "../../global/" as g;
+
+// ==================================================
+// width
+// ==================================================
+
+$width-min: 0;
+$width-max: 1100;
+$width-multiple: 5;
+@for $i from $width-min through math.div($width-max, $width-multiple) {
+  @include g.sorting-breakpoint(".u-w-#{$i * $width-multiple}") {
+    width: #{$i * $width-multiple}px !important;
+  }
+}
+@include g.sorting-breakpoint(".u-w-auto") { width: auto !important; }
+
+// ==================================================
+// column
+// ==================================================
+
+$grid-column: 12;
+@for $i from 1 through $grid-column {
+  @if $i < 10{
+    @include g.sorting-breakpoint(".u-col-0#{$i}") { width: ( math.div($i, $grid-column) ) * 100% !important; }
+  } @else {
+    @include g.sorting-breakpoint(".u-col-#{$i}") { width: ( math.div($i, $grid-column) ) * 100% !important; }
+  }
+}
+@include g.sorting-breakpoint(".u-col-13") { width: 10% !important; }

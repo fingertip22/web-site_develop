@@ -1,0 +1,12 @@
+head
+  case pageType
+    when 'TOP'
+      title トップページ | ダミーサイト
+    default
+      title #{title} | ダミーサイト
+  meta(charset="utf-8")
+  meta(name="viewport", content="width=device-width")
+  meta(name='format-detection' content='telephone=no')
+  meta(name='description', content!=description)
+  link(rel="stylesheet", href="/assets/css/cmn/cmn.css")
+  block add_css

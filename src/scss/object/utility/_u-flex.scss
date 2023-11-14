@@ -1,0 +1,42 @@
+// ==================================================
+// use
+// ==================================================
+
+// math
+@use "sass:math";
+
+// settings
+@use "../../global/" as g;
+
+// ==================================================
+// display
+// ==================================================
+
+// justify-content
+@include g.sorting-breakpoint(".u-jc-flex-start") { justify-content: flex-start !important; }
+@include g.sorting-breakpoint(".u-jc-center") { justify-content: center !important; }
+@include g.sorting-breakpoint(".u-jc-flex-end") { justify-content: flex-end !important; }
+@include g.sorting-breakpoint(".u-jc-space-between") { justify-content: space-between !important; }
+@include g.sorting-breakpoint(".u-jc-space-around") { justify-content: space-around !important; }
+
+// align-items
+@include g.sorting-breakpoint(".u-ai-stretch") { align-items: stretch !important; }
+@include g.sorting-breakpoint(".u-ai-flex-start") { align-items: flex-start !important; }
+@include g.sorting-breakpoint(".u-ai-center") { align-items: center !important; }
+@include g.sorting-breakpoint(".u-ai-flex-end") { align-items: flex-end !important; }
+
+// flex-direction
+@include g.sorting-breakpoint(".u-fd-column") { flex-direction: column !important; }
+@include g.sorting-breakpoint(".u-fd-column-reverse") { flex-direction: column-reverse !important; }
+@include g.sorting-breakpoint(".u-fd-row") { flex-direction: row !important; }
+@include g.sorting-breakpoint(".u-fd-row-reverse") { flex-direction: row-reverse !important; }
+
+// flex-wrap
+@include g.sorting-breakpoint(".u-fxw-wrap") { flex-wrap: wrap !important; }
+@include g.sorting-breakpoint(".u-fxw-nowrap") { flex-wrap: nowrap !important; }
+@include g.sorting-breakpoint(".u-fxw-wrap-reverse") { flex-wrap: wrap-reverse !important; }
+
+// flex
+@include g.sorting-breakpoint(".u-fx-01") { flex: 1 !important; }
+@include g.sorting-breakpoint(".u-fx-02") { flex: 0 0 auto !important; }
+@include g.sorting-breakpoint(".u-fx-03") { flex: 0 1 auto !important; }

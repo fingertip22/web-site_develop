@@ -1,0 +1,18 @@
+include /mixin/_index
+include /parts/_listLink
+
+block var
+  //- タイトルタグを指定
+  - title = '●●●●タイトル'
+  //- ディスクリプションを指定
+  - description = '●●●●ディスクリプション'
+
+doctype html
+html(lang="ja")
+  include /parts/_head
+  body
+    include /layout/_header
+    main.l-main
+      block main
+    include /layout/_footer
+    block add_script

@@ -1,0 +1,16 @@
+// ==================================================
+// use
+// ==================================================
+
+// math
+@use "sass:math";
+
+// settings
+@use "../../global/" as g;
+
+// ==================================================
+// white-space
+// ==================================================
+
+@include g.sorting-breakpoint(".u-ws-normal") { white-space: normal !important; }
+@include g.sorting-breakpoint(".u-ws-nowrap") { white-space: nowrap !important; }

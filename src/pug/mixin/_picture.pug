@@ -1,0 +1,21 @@
+//- デフォルトのルール（値がなければ以下の値が反映されます）
+//- クラス名：className（String）
+//- ソース：imgSrc（String）
+//- width：imgWidth（Number）
+//- height：imgHeight（Number）
+//- alt：imgAlt（String）
+//- webp：webp画像の有無（Boolean）
+//- SP用画像の有無：sp（Boolean）
+//- SP表示時のwidth：spWidth（Number）
+//- SP表示時のheight：spHeight（Number）
+//- loading="lazy"：lazy（Boolean）
+
+mixin picture(className=null, imgSrc=null, imgWidth=null, imgHeight=null, imgAlt=null, webp=false, sp=false, spWidth=null, spHeight=null, lazy=true)
+  picture(class=(className != null ? className : null))
+    if webp === true
+      source(srcset=imgSrc.replace('.jpg', '.webp').replace('.png', '.webp'), width=(imgWidth != null ? imgWidth : null), height=(imgHeight != null ? imgHeight : null), type="image/webp")
+    if webp === true && sp === true
+      source(media='(max-width: 767.98px)', srcset=imgSrc.replace('_pc', '_sp').replace('.png', '.webp'), width=(spWidth != null ? spWidth : null), height=(spHeight != null ? spHeight : null), type="image/webp")
+    if sp === true
+      source(media='(max-width: 767.98px)', srcset=imgSrc.replace('_pc', '_sp'), width=(spWidth != null ? spWidth : null), height=(spHeight != null ? spHeight : null))
+    img(src=imgSrc, width=(imgWidth != null ? imgWidth : null), height=(imgHeight != null ? imgHeight : null), alt=(imgAlt != null ? imgAlt : ""), decoding="async", loading=(!lazy ? null : 'lazy'))

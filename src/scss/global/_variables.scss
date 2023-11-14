@@ -1,0 +1,47 @@
+// ==================================================
+// use
+// ==================================================
+
+// math
+@use "sass:math";
+
+// ==================================================
+// variable settings
+// ==================================================
+
+$breakpoint: 768;
+
+// font-family
+$font_base: 'Noto Sans JP', sans-serif;
+
+// font-size
+$font_size: 16;
+
+// width contents
+$width_base: 1024;
+
+// color
+$color_primary: #000;
+$color_secondary: #FFF;
+$color_black01: #333;
+
+// border-radius value
+$border_radius: 6px;
+
+// line-hight value
+$line_height: math.div(24, 16);
+
+// default speed
+$speed: 300ms;
+
+// default easing
+$easing: ease;
+
+// mouseover transition value
+$hover_transition: $speed $easing;
+
+// mouseover opacity value
+$hover_opacity: .7;
+
+// transition value
+$transition: $speed $easing;

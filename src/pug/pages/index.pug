@@ -1,0 +1,27 @@
+extend /layout/_layout
+
+block var
+
+  //- ナビゲーションに表示するアンカーリンクのタイプを指定
+  - pageType = 'TOP'
+
+  //- ディスクリプションを指定
+  - description = 'ディスクリプション'
+
+  //- パンくず
+  -
+    breadcrumbList = [
+      ['TOP', 'リンク先'],
+      ['下層', null],
+    ]
+
+block prepend add_css
+//- 追加や固有のCSSがある場合はここに追記
+
+block prepend main
+  +breadcrumbs(breadcrumbList)
+  article.l-article
+    +picture('class', imgSrc='/assets/img/***.png', imgWidth=400, imgHeight=300, imgAlt=null, webp=true, sp=true, spWidth=null, spHeight=null, lazy=true)
+
+block prepend add_script
+//- 追加や固有のJSがある場合はここに追記

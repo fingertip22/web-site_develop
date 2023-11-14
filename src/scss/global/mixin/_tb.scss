@@ -1,0 +1,33 @@
+// ==================================================
+// use
+// ==================================================
+
+// math
+@use "sass:math";
+
+// settings(variables)
+@use "../variables" as g;
+
+// ==================================================
+// media query for Tablet
+// ==================================================
+
+// @desc - Tablet表示用のメディアクエリを設定
+// @param {number} $size - ブレイクポイントを指定
+// @param {string} $type - デバイスの向き（縦長・横長）を指定
+//
+// @example - 使い方
+// .box {
+//   width: 300px;
+//   @include g.tb {
+//     width: 100%;
+//   }
+// }
+
+$breakPointTbMax: g.$width_base + "px";
+$breakPointTbMin: g.$breakpoint + "px";
+@mixin tb($max: $breakPointTbMax, $min: $breakPointTbMin) {
+  @media (max-width: $max) and (min-width: $min) {
+    @content;
+  }
+}

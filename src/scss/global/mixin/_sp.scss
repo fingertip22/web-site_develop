@@ -1,0 +1,39 @@
+// ==================================================
+// use
+// ==================================================
+
+// math
+@use "sass:math";
+
+// settings(variables)
+@use "../variables" as g;
+
+// ==================================================
+// media query for Smart Phone
+// ==================================================
+
+// @desc - SP表示用のメディアクエリを設定
+// @param {number} $size - ブレイクポイントを指定
+// @param {string} $type - デバイスの向き（縦長・横長）を指定
+//
+// @example - 使い方
+// .box {
+//   width: 300px;
+//   @include g.sp {
+//     width: 100%;
+//   }
+// }
+
+$breakPointSpMax: g.$breakpoint - 0.02 + "px";
+@mixin sp($size: $breakPointSpMax, $type: null) {
+	@if $type == null {
+		@media (max-width: $breakPointSpMax) {
+			@content;
+		}
+	}
+	@else if $type == "landscape" {
+		@media (max-width: $breakPointSpMax) and (orientation: landscape) {
+			@content;
+		}
+	}
+}

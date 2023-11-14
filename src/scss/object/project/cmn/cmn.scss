@@ -1,0 +1,35 @@
+@charset "utf-8";
+
+// ==================================================
+// use
+// ==================================================
+
+// math
+@use "sass:math";
+
+// settings
+@forward "../../../global/";
+
+// reset
+@forward "../../../foundation/reset";
+
+// layout
+@forward "../../../layout/l-layout";
+
+// header
+@forward "../../../layout/l-header";
+
+// footer
+@forward "../../../layout/l-footer";
+
+// main
+@forward "../../component/";
+
+// library
+@forward "../../../library/";
+
+// project
+// @forward "";
+
+// utility
+@forward "../../utility/";

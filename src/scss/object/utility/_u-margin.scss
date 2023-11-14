@@ -1,0 +1,44 @@
+// ==================================================
+// use
+// ==================================================
+
+// math
+@use "sass:math";
+
+// settings
+@use "../../global/" as g;
+
+// ==================================================
+// margin
+// ==================================================
+
+$margin-base-size: 8;
+@for $i from 0 through 10 {
+  @include g.sorting-breakpoint(".u-mt-#{$i * $margin-base-size}") {
+    margin-top: #{$margin-base-size * $i}px !important;
+  }
+  @include g.sorting-breakpoint(".u-mr-#{$i * $margin-base-size}") {
+    margin-right: #{$margin-base-size * $i}px !important;
+  }
+  @include g.sorting-breakpoint(".u-mb-#{$i * $margin-base-size}") {
+    margin-bottom: #{$margin-base-size * $i}px !important;
+  }
+  @include g.sorting-breakpoint(".u-ml-#{$i * $margin-base-size}") {
+    margin-left: #{$margin-base-size * $i}px !important;
+  }
+}
+@include g.sorting-breakpoint(".u-mt-auto") {
+  margin-top: auto !important;
+}
+@include g.sorting-breakpoint(".u-mr-auto") {
+  margin-right: auto !important;
+}
+@include g.sorting-breakpoint(".u-mb-auto") {
+  margin-bottom: auto !important;
+}
+@include g.sorting-breakpoint(".u-ml-auto") {
+  margin-left: auto !important;
+}
+@include g.sorting-breakpoint(".u-m-auto") {
+  margin: auto !important;
+}

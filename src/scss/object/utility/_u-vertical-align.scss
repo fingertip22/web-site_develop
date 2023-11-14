@@ -1,0 +1,17 @@
+// ==================================================
+// use
+// ==================================================
+
+// math
+@use "sass:math";
+
+// settings
+@use "../../global/" as g;
+
+// ============================================================
+// vertical-align
+// ============================================================
+
+@include g.sorting-breakpoint(".u-va-top") { vertical-align: top !important; }
+@include g.sorting-breakpoint(".u-va-middle") { vertical-align: middle !important; }
+@include g.sorting-breakpoint(".u-va-bottom") { vertical-align: bottom !important; }

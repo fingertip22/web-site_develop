@@ -1,0 +1,30 @@
+// ==================================================
+// use
+// ==================================================
+
+// math
+@use "sass:math";
+
+// settings(variables)
+@use "../variables" as g;
+
+// mixin(hover action)
+@use "../mixin/hover"  as m;
+
+// ==================================================
+// hover action (opacity)
+// ==================================================
+
+// @desc - 基本hoverスタイル付与（透過）
+//
+// @example - 使い方
+// @include g.hover-opacity;
+
+@mixin hover-opacity {
+  @include m.hover {
+    transition: opacity g.$hover_transition;
+    &:hover {
+      opacity: g.$hover_opacity;
+    }
+  }
+}

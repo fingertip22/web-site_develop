@@ -1,0 +1,33 @@
+// ==================================================
+// use
+// ==================================================
+
+// math
+@use "sass:math";
+
+// settings
+@use "../../global/" as g;
+
+// ==================================================
+// utilities
+// ==================================================
+
+// mixin「sorting-breakpoint」を使用することにより、
+// 以下の単一パーツは3種類出力され、ブレークポイント別に分けて使用できます。
+//
+// 例：クラス「.dn {display: none}」の場合
+// .u-dn：PC・SP共に非表示
+// .u-dn--pc：PCのみ非表示
+// .u-dn--sp：SPのみ非表示
+
+@forward "u-background";
+@forward "u-display";
+@forward "u-flex";
+@forward "u-font";
+@forward "u-hidetext";
+@forward "u-margin";
+@forward "u-padding";
+@forward "u-text-align";
+@forward "u-vertical-align";
+@forward "u-white-space";
+@forward "u-width";

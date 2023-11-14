@@ -1,0 +1,8 @@
+mixin breadcrumbs(breadcrumbList)
+  ol.l-breadcrumbs
+    - for (let i = 0; i < breadcrumbList.length; i++)
+      if (i + 1 === breadcrumbList.length)
+        li.l-breadcrumbs__item #{breadcrumbList[i][0]}
+      else
+        li.l-breadcrumbs__item
+          a(href=breadcrumbList[i][1]).l-breadcrumbs__link #{breadcrumbList[i][0]}

@@ -1,0 +1,31 @@
+// ==================================================
+// use
+// ==================================================
+
+// math
+@use "sass:math";
+
+// settings(variables)
+@use "../variables" as g;
+
+// ==================================================
+// media query for PC
+// ==================================================
+
+// @desc - PC表示用のメディアクエリを設定
+// @param {number} $size - ブレイクポイントを指定
+//
+// @example - 使い方
+// .box {
+//   width: 300px;
+//   @include g.pc {
+//     width: 100%;
+//   }
+// }
+
+@mixin pc($size: g.$breakpoint) {
+  $width: $size + "px";
+  @media (min-width: $width) {
+    @content;
+  }
+}
